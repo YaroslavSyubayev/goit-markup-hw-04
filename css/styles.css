@@ -66,6 +66,8 @@ body {
 
 .header {
   border-bottom: 1px solid var(--accent);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -155,6 +157,8 @@ body {
     url("./../images/people-office.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  max-width: 1440px;
+  margin: 0 auto;
   padding-top: 188px;
   padding-bottom: 188px;
 }
@@ -214,9 +218,13 @@ body {
   margin-right: 24px;
 }
 
-.core-icon {
-  margin: 0 auto;
+.core-item-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 32px;
+  background: var(--light);
+  border-radius: 4px;
 }
 
 .core-header {
@@ -323,6 +331,11 @@ body {
   background-color: var(--primary-brand);
 }
 
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--pressed-state);
+}
+
 .customers {
   padding: 120px 0;
 }
@@ -339,11 +352,26 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
+  border: 1px solid;
+  border-color: var(--subtle-text);
+  border-radius: 4px;
+}
+
+.customers-logo-icon {
+  fill: var(--subtle-text);
+}
+
+.customers-logo-link:hover,
+.customers-logo-link:focus {
+  border-color: var(--pressed-state);
+}
+
+.customers-logo-link:hover .customers-logo-icon,
+.customers-logo-link:focus .customers-logo-icon {
+  fill: var(--pressed-state);
 }
 
 .customers-list-item {
-  border: 1px solid var(--subtle-text);
-  border-radius: 4px;
   width: 168px;
   height: 88px;
 }
@@ -374,6 +402,9 @@ body {
 .product-selection-button.active {
   background: var(--primary-brand);
   color: var(--light);
+  border-color: transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .product-selection-button:hover,
@@ -406,8 +437,13 @@ body {
   flex-basis: calc((100% - 2 * 24px) / 3);
 }
 
-.work-item:hover,
-.work-item:focus {
+.work-item-link {
+  display: block;
+  text-decoration: none;
+}
+
+.work-item-link:hover,
+.work-item-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -433,10 +469,6 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text);
-}
-
-.work-item-link {
-  text-decoration: none;
 }
 
 .footer {
@@ -493,6 +525,11 @@ body {
   height: 100%;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--success);
 }
 
 .visually-hidden {
