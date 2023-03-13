@@ -222,7 +222,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 32px;
+  height: 112px;
+  margin-bottom: 8px;
   background: var(--light);
   border-radius: 4px;
 }
